@@ -17,7 +17,7 @@ const config = {
 			fallback: null
 		}),
 		paths: {
-			base: process.env.NODE_ENV === 'production' ? '/your-repo-name' : ''
+			base: process.env.NODE_ENV === 'production' ? '/my-website' : ''
 		},
 		prerender: {
 			handleHttpError: 'warn'
