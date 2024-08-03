@@ -3,29 +3,26 @@
 	import Header from '$lib/components/organisms/Header.svelte';
 	import Footer from '$lib/components/organisms/Footer.svelte';
 
-	import Fade from '$lib/components/organisms/Fade.svelte';
 
 	import Gradient from '$lib/components/organisms/Gradient.svelte';
 	import Socials from '$lib/components/molecules/Socials.svelte';
 	import Image from '$lib/components/atoms/Image.svelte';
 </script>
 
-<Fade>
-	<Gradient />
-	<Header />
-	<div class="container">
-		<div class="intro">
-			<About />
-			<div class="image-container">
-				<div class="image">
-					<Image src="/images/me.png" alt="An image of me." />
-				</div>
-				<Socials />
+<Gradient />
+<Header />
+<div class="container">
+	<div class="intro">
+		<About />
+		<div class="image-container">
+			<div class="image">
+				<Image src="/images/me.png" alt="An image of me." />
 			</div>
+			<Socials />
 		</div>
 	</div>
-	<Footer />
-</Fade>
+</div>
+<Footer />
 
 <style lang="scss">
 	@import '$lib/scss/_mixins.scss';

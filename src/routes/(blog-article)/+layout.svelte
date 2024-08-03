@@ -3,6 +3,7 @@
 	import Footer from '$lib/components/organisms/Footer.svelte';
 	import Tag from '$lib/components/atoms/Tag.svelte';
 	import dateformat from 'dateformat';
+	import { base } from '$app/paths';
 
 	import { keywords, siteBaseUrl, title } from '$lib/data/meta';
 	import type { BlogPost } from '$lib/utils/types';
@@ -47,51 +48,47 @@
 	{/if}
 </svelte:head>
 
-<Fade>
-	<Gradient />
-	<div class="contaier">
-		<Header />
-	</div>
-	<div class="article-layout">
-		<main>
-			<article id="article-content">
-				<div class="header">
-					{#if post}
-						<h1>{post.title}</h1>
-						<div class="note">Published on {dateformat(post.date, 'UTC:dd mmmm yyyy')}</div>
-						{#if post.updated}
-							<div class="note">Updated on {dateformat(post.updated, 'UTC:dd mmmm yyyy')}</div>
-						{/if}
-
-						{#if post.tags?.length}
-							<div class="tags">
-								{#each post.tags as tag}
-									<Tag>{tag}</Tag>
-								{/each}
-							</div>
-						{/if}
+<Gradient />
+<Header />
+<div class="article-layout">
+	<main>
+		<article id="article-content">
+			<div class="header">
+				{#if post}
+					<h1>{post.title}</h1>
+					<div class="note">Published on {dateformat(post.date, 'UTC:dd mmmm yyyy')}</div>
+					{#if post.updated}
+						<div class="note">Updated on {dateformat(post.updated, 'UTC:dd mmmm yyyy')}</div>
 					{/if}
-				</div>
-				{#if post && post.coverImage && post.showCoverImage}
-					<div class="cover-image">
-						<Image src={post.coverImage} alt={post.title} />
-					</div>
-				{/if}
-				<div class="content">
-					<slot />
-				</div>
-			</article>
 
-			{#if post.relatedPosts && post.relatedPosts.length > 0}
-				<div class="container">
-					<RelatedPosts posts={post.relatedPosts} />
+					{#if post.tags?.length}
+						<div class="tags">
+							{#each post.tags as tag}
+								<Tag>{tag}</Tag>
+							{/each}
+						</div>
+					{/if}
+				{/if}
+			</div>
+			{#if post && post.coverImage && post.showCoverImage}
+				<div class="cover-image">
+					<Image src={post.coverImage} alt={post.title} />
 				</div>
 			{/if}
-		</main>
+			<div class="content">
+				<slot />
+			</div>
+		</article>
 
-		<Footer />
-	</div>
-</Fade>
+		{#if post.relatedPosts && post.relatedPosts.length > 0}
+			<div class="container">
+				<RelatedPosts posts={post.relatedPosts} />
+			</div>
+		{/if}
+	</main>
+
+	<Footer />
+</div>
 
 <style lang="scss">
 	@import '$lib/scss/_mixins.scss';

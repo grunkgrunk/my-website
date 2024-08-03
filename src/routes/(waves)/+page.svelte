@@ -7,7 +7,6 @@
 	import ContentSection from '$lib/components/organisms/ContentSection.svelte';
 	import Footer from '$lib/components/organisms/Footer.svelte';
 	import Gradient from '$lib/components/organisms/Gradient.svelte';
-	import Fade from '$lib/components/organisms/Fade.svelte';
 
 	import type { Feature, BlogPost } from '$lib/utils/types';
 
@@ -19,33 +18,32 @@
 	let { posts } = data;
 </script>
 
-<Fade>
-	<Gradient />
-	<div class="container">
-		<div class="intro">
-			<Header />
-			<Hero />
-			<div />
-			<div id="projects">
-				<SeparationLine />
-			</div>
-		</div>
-		<ContentSection title="Projects" octothorb={true}>
-			<div class="grid">
-				{#each posts as post}
-					<BlogPostCard
-						title={post.title}
-						coverImage={post.coverImage}
-						excerpt={post.excerpt}
-						slug={post.slug}
-						tags={post.tags}
-					/>
-				{/each}
-			</div>
-		</ContentSection>
+<Gradient />
+<div class="intro">
+	<Header />
+	<Hero />
+	<div />
+	<div id="projects">
+		<SeparationLine />
 	</div>
-	<Footer />
-</Fade>
+</div>
+
+<div class="container">
+	<ContentSection title="Projects" octothorb={true}>
+		<div class="grid">
+			{#each posts as post}
+				<BlogPostCard
+					title={post.title}
+					coverImage={post.coverImage}
+					excerpt={post.excerpt}
+					slug={post.slug}
+					tags={post.tags}
+				/>
+			{/each}
+		</div>
+	</ContentSection>
+</div>
+<Footer />
 
 <style lang="scss">
 	@import '$lib/scss/_mixins.scss';

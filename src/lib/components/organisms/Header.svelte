@@ -2,19 +2,17 @@
 	import { base } from '$app/paths';
 </script>
 
-<div class="container">
-	<header>
-		<nav class="container">
-			<div class="logo">
-				<a href="{base}/">Home</a>
-			</div>
-			<div class="links">
-				<a href="{base}/#projects">Projects</a>
-				<a href="{base}/about">About</a>
-			</div>
-		</nav>
-	</header>
-</div>
+<header>
+	<nav class="container">
+		<div class="logo">
+			<a href="{base}/">Home</a>
+		</div>
+		<div class="links">
+			<a href="{base}/#projects">Projects</a>
+			<a href="{base}/about">About</a>
+		</div>
+	</nav>
+</header>
 
 <style lang="scss">
 	@import '$lib/scss/breakpoints.scss';

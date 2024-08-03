@@ -8,7 +8,7 @@
 	export let alt: string;
 	export let fullBleed: boolean | undefined = undefined;
 
-	export let formats: string[] = ['avif', 'webp', 'png'];
+	export let formats: string[] = ['avif', 'webp', 'png', 'gif'];
 	export let widths: string[] | undefined = undefined;
 
 	// src = `/${base}${src}`;
@@ -44,12 +44,12 @@
 
 {#if fileExtension === 'mp4'}
 	<video autoplay loop>
-		<source {src} type="video/mp4" />
+		<source src={base + src} type="video/mp4" />
 	</video>
 {:else}
 	<img
 		srcset={buildSrcset()}
-		{src}
+		src={base + src}
 		{alt}
 		loading="lazy"
 		decoding="async"

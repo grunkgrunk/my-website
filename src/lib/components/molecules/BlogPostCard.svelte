@@ -14,7 +14,7 @@
 </script>
 
 <Card
-	href="{base}/{slug}"
+	href={slug}
 	target="_self"
 	additionalClass="blog-post-card {!showImage || !coverImage ? 'no-image' : ''}"
 >

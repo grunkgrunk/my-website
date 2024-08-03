@@ -21,10 +21,6 @@
 		justify-content: center;
 		align-items: center;
 		gap: 15px;
-		position: relative;
-		border-color: black;
-		border-radius: 10px;
-		border-width: 10px;
 
 		.hello {
 			text-align: center;
@@ -33,25 +29,10 @@
 		.intro {
 			font-weight: 500;
 			font-size: 1.4rem;
-			width: min(100%, 500px);
-			display: flex;
-			flex-direction: column;
-
-			.left {
-				text-align: left;
+			width: min(50%, 500px);
+			@include for-phone-only {
+				font-size: 1rem;
 			}
-			.right {
-				text-align: right;
-			}
-		}
-
-		.ctas {
-			display: flex;
-			flex-wrap: wrap;
-			align-items: center;
-			justify-content: center;
-			gap: 10px;
-			width: 100%;
 		}
 	}
 </style>
