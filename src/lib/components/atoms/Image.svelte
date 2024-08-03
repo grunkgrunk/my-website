@@ -47,14 +47,7 @@
 		<source src={base + src} type="video/mp4" />
 	</video>
 {:else}
-	<img
-		srcset={buildSrcset()}
-		src={base + src}
-		{alt}
-		loading="lazy"
-		decoding="async"
-		class:full-bleed={fullBleed}
-	/>
+	<img src={base + src} {alt} loading="lazy" decoding="async" class:full-bleed={fullBleed} />
 {/if}
 
 <style lang="scss">

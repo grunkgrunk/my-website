@@ -28,21 +28,19 @@
 	</div>
 </div>
 
-<div class="container">
-	<ContentSection title="Projects" octothorb={true}>
-		<div class="grid">
-			{#each posts as post}
-				<BlogPostCard
-					title={post.title}
-					coverImage={post.coverImage}
-					excerpt={post.excerpt}
-					slug={post.slug}
-					tags={post.tags}
-				/>
-			{/each}
-		</div>
-	</ContentSection>
-</div>
+<ContentSection title="Projects" octothorb={true}>
+	<div class="grid">
+		{#each posts as post}
+			<BlogPostCard
+				title={post.title}
+				coverImage={post.coverImage}
+				excerpt={post.excerpt}
+				slug={post.slug}
+				tags={post.tags}
+			/>
+		{/each}
+	</div>
+</ContentSection>
 <Footer />
 
 <style lang="scss">
