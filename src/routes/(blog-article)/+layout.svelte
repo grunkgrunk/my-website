@@ -11,7 +11,6 @@
 	import Image from '$lib/components/atoms/Image.svelte';
 	import Gradient from '$lib/components/organisms/Gradient.svelte';
 
-	import Fade from '$lib/components/organisms/Fade.svelte';
 
 	export let data: { post: BlogPost };
 	$: ({ post } = data);
