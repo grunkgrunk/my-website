@@ -12,8 +12,8 @@ const extensions = ['.svelte', '.md'];
 const config = {
 	kit: {
 		adapter: adapter({
-			//pages: 'build',
-			//assets: 'build',
+			pages: 'build',
+			assets: 'build',
 			fallback: '404.html'
 		}),
 		paths: {
@@ -26,7 +26,7 @@ const config = {
 	preprocess: [
 		vitePreprocess(),
 		mdsvex({
-			extensions: extensions,
+			extensions,
 			rehypePlugins: [
 				rehypeExternalLinks, // Adds 'target' and 'rel' to external links
 				rehypeSlug, // Adds 'id' attributes to Headings (h1,h2,etc)

@@ -3,14 +3,12 @@
 	import Footer from '$lib/components/organisms/Footer.svelte';
 	import Tag from '$lib/components/atoms/Tag.svelte';
 	import dateformat from 'dateformat';
-	import { base } from '$app/paths';
 
 	import { keywords, siteBaseUrl, title } from '$lib/data/meta';
 	import type { BlogPost } from '$lib/utils/types';
 	import RelatedPosts from '$lib/components/organisms/RelatedPosts.svelte';
 	import Image from '$lib/components/atoms/Image.svelte';
 	import Gradient from '$lib/components/organisms/Gradient.svelte';
-
 
 	export let data: { post: BlogPost };
 	$: ({ post } = data);
