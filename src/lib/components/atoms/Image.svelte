@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { dev } from '$app/environment';
+	import Alert from '$lib/icons/alert.svelte';
 	import About from '../organisms/About.svelte';
+	import { base } from '$app/paths';
 
 	export let src: string;
 	export let alt: string;
@@ -9,6 +11,7 @@
 	export let formats: string[] = ['avif', 'webp', 'png'];
 	export let widths: string[] | undefined = undefined;
 
+	// src = `/${base}${src}`;
 	$: fileName = src.split('.')[0];
 	$: fileExtension = src.split('.').slice(-1)[0];
 
