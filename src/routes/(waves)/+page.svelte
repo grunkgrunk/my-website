@@ -11,7 +11,6 @@
 	import type { Feature, BlogPost } from '$lib/utils/types';
 
 	export let data: {
-		features: Feature[];
 		posts: BlogPost[];
 	};
 

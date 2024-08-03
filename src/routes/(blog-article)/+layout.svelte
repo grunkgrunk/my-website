@@ -16,6 +16,7 @@
 	let metaKeywords = keywords;
 
 	$: {
+		console.log({ post });
 		if (post?.tags?.length) {
 			metaKeywords = post.tags.concat(metaKeywords);
 		}
