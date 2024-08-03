@@ -1,29 +1,22 @@
 <script>
-	import SparklingHighlight from '$lib/components/molecules/SparklingHighlight.svelte';
-	import Socials from '$lib/components/molecules/Socials.svelte';
-	import Image from '../atoms/Image.svelte';
 </script>
 
 <section id="about">
-	<div class="info">
-		<h2>
-			This is a catchy headline that
-			<SparklingHighlight color="secondary">sparkles!</SparklingHighlight>
-		</h2>
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum velit voluptatibus commodi
-			autem provident quam labore, libero beatae praesentium voluptate?
-		</p>
-		<div class="socials">
-			<span>Socials:</span>
-			<Socials />
-		</div>
+	<div class="item">
+		<h2>Education</h2>
+		<p>I hold a master's degree in mathematics from University of Copenhagen.</p>
 	</div>
-	<div class="image">
-		<Image
-			src="/images/sample-image.png"
-			alt="Sample for the static template"
-		/>
+
+	<div class="item">
+		<h2>Volunteering</h2>
+		<p>
+			I have taught kids how to code at <a href="https://codingpirates.dk/">Coding Pirates</a> and volunteered
+			at a summer camp for kids.
+		</p>
+	</div>
+	<div class="item">
+		<h2>Free time</h2>
+		<p>When I'm not at work I enjoy hanging out with friends, playing board games and trombone.</p>
 	</div>
 </section>
 
@@ -31,57 +24,26 @@
 	@import '$lib/scss/breakpoints.scss';
 
 	#about {
-		position: relative;
-		display: grid;
-		grid-template-columns: 500px 250px;
-		align-items: center;
-		justify-content: space-between;
-		padding-bottom: 50px;
+		display: flex;
+		justify-content: space-around;
+		flex-direction: column;
+		gap: 50px;
 
-		@include for-phone-only {
-			grid-template-columns: 1fr;
-			justify-items: center;
-			gap: 20px;
+		h2 {
+			font-size: 1.2rem;
+			font-family: var(--font--title);
+			font-weight: 700;
 		}
-
-		.info {
-			display: flex;
-			flex-direction: column;
-			gap: 10px;
-			h2 {
-				@include for-phone-only {
-					text-align: center;
-				}
-			}
-
-			p {
-				@include for-phone-only {
-					text-align: justify;
-				}
-			}
-
-			@include for-phone-only {
-				gap: 20px;
-			}
+		p {
+			margin-top: 5px;
+			font-size: 0.9rem;
+			hyphens: auto;
+			max-width: 350px;
 		}
-
-		.socials {
-			display: flex;
-			align-items: center;
-			gap: 15px;
-
-			@include for-phone-only {
-				justify-content: center;
-				margin-bottom: 10px;
-				span {
-					display: none;
-				}
-			}
-		}
-
-		.image {
-			width: 220px;
-			height: 220px;
+		.item {
+			border-left: 1px solid black;
+			width: 90%;
+			padding-left: 10px;
 		}
 	}
 </style>

@@ -2,6 +2,7 @@
 	export let id: string | undefined = undefined;
 	export let title: string | undefined = undefined;
 	export let description: string | undefined = undefined;
+	export let octothorb: boolean = false;
 
 	export let align: 'left' | 'top' | 'right' = 'top';
 </script>
@@ -12,6 +13,9 @@
 			<div class="text">
 				{#if title}
 					<h2>
+						{#if octothorb}
+							<span class="heading-link">#</span>
+						{/if}
 						{title}
 					</h2>
 				{/if}
@@ -41,7 +45,8 @@
 		align-items: center;
 		justify-content: space-between;
 		gap: 40px;
-		padding: 50px 0;
+		// padding-bottom: 50px;
+		padding: 50px;
 
 		.title-area {
 			flex: 2;

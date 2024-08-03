@@ -8,6 +8,9 @@
 	import type { BlogPost } from '$lib/utils/types';
 	import RelatedPosts from '$lib/components/organisms/RelatedPosts.svelte';
 	import Image from '$lib/components/atoms/Image.svelte';
+	import Gradient from '$lib/components/organisms/Gradient.svelte';
+
+	import Fade from '$lib/components/organisms/Fade.svelte';
 
 	export let data: { post: BlogPost };
 	$: ({ post } = data);
@@ -44,57 +47,54 @@
 	{/if}
 </svelte:head>
 
-<div class="article-layout">
-	<Header showBackground />
+<Fade>
+	<Gradient />
+	<div class="contaier">
+		<Header />
+	</div>
+	<div class="article-layout">
+		<main>
+			<article id="article-content">
+				<div class="header">
+					{#if post}
+						<h1>{post.title}</h1>
+						<div class="note">Published on {dateformat(post.date, 'UTC:dd mmmm yyyy')}</div>
+						{#if post.updated}
+							<div class="note">Updated on {dateformat(post.updated, 'UTC:dd mmmm yyyy')}</div>
+						{/if}
 
-	<main>
-		<article id="article-content">
-			<div class="header">
-				{#if post}
-					<h1>{post.title}</h1>
-					<div class="note">Published on {dateformat(post.date, 'UTC:dd mmmm yyyy')}</div>
-					{#if post.updated}
-						<div class="note">Updated on {dateformat(post.updated, 'UTC:dd mmmm yyyy')}</div>
+						{#if post.tags?.length}
+							<div class="tags">
+								{#each post.tags as tag}
+									<Tag>{tag}</Tag>
+								{/each}
+							</div>
+						{/if}
 					{/if}
-					{#if post.readingTime}
-						<div class="note">{post.readingTime}</div>
-					{/if}
-					{#if post.tags?.length}
-						<div class="tags">
-							{#each post.tags as tag}
-								<Tag>{tag}</Tag>
-							{/each}
-						</div>
-					{/if}
+				</div>
+				{#if post && post.coverImage && post.showCoverImage}
+					<div class="cover-image">
+						<Image src={post.coverImage} alt={post.title} />
+					</div>
 				{/if}
-			</div>
-			{#if post && post.coverImage}
-				<div class="cover-image">
-					<Image src={post.coverImage} alt={post.title} />
+				<div class="content">
+					<slot />
+				</div>
+			</article>
+
+			{#if post.relatedPosts && post.relatedPosts.length > 0}
+				<div class="container">
+					<RelatedPosts posts={post.relatedPosts} />
 				</div>
 			{/if}
-			<div class="content">
-				<slot />
-			</div>
-		</article>
+		</main>
 
-		{#if post.relatedPosts && post.relatedPosts.length > 0}
-			<div class="container">
-				<RelatedPosts posts={post.relatedPosts} />
-			</div>
-		{/if}
-	</main>
-
-	<Footer />
-</div>
+		<Footer />
+	</div>
+</Fade>
 
 <style lang="scss">
 	@import '$lib/scss/_mixins.scss';
-
-	.article-layout {
-		--body-background-color: var(--color--post-page-background);
-		background-color: var(--color--post-page-background);
-	}
 
 	#article-content {
 		--main-column-width: 65ch;

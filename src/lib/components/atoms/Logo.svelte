@@ -1,86 +1,40 @@
-<script>
-	export let animated = true;
-</script>
-
-<div class="logo" class:animated>
-	<svg
-		id="logo-text"
-		width="723.84009"
-		height="116.720268"
-		viewBox="0 0 723.84009 116.720269"
-		fill="none"
-		xmlns="http://www.w3.org/2000/svg"
-	>
-		<text
-			xml:space="preserve"
-			id="text"
-			transform="translate(-278.77228,-206.83728)"
-			><tspan x="275.57227" y="292.17088" id="tspan1319"
-				><tspan
-					style="font-size:106.667px;font-family:YoungSerif;"
-					id="tspan1317">Site Logo</tspan
-				></tspan
-			></text
+<div class="logo-container">
+	<div class="circle" />
+	<div class="logo">
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			height="24px"
+			width="24px"
+			viewBox="0 -960 960 960"
+			fill="#000000"
+			><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" /></svg
 		>
-	</svg>
+	</div>
 </div>
 
 <style lang="scss">
 	@import '$lib/scss/breakpoints.scss';
 
-	.logo {
-		width: auto;
-		height: 100%;
-
-		display: flex;
-		gap: 16px;
-		align-items: center;
-
-		@include for-phone-only {
-			gap: 8px;
-		}
-
-		#logo-text {
-			width: auto;
-			height: 100%;
-			max-height: 28px;
-
-			#text {
-				transition: all 0.2s ease-in-out;
-				fill: var(--color--text);
-			}
-		}
-
-		&:hover {
-			#logo-text {
-				filter: drop-shadow(0px 0px 3px var(--color--primary));
-			}
-		}
+	.logo-container {
+		display: inline-block;
+		position: relative;
+		width: 30px; /* Adjust as needed */
+		height: 30px; /* Adjust as needed to fit the circle and logo */
 	}
 
-	@media screen and (prefers-reduced-motion: no-preference) {
-		.animated {
-			#icon {
-				> path {
-					--text-color: var(--color--text-shade);
-					stroke-width: 2;
-					animation: svg-text-stroke 3s;
-				}
+	.logo {
+		width: 24px;
+		height: 24px;
+	}
 
-				#darker {
-					> path {
-						--text-color: var(--color--text);
-						stroke-width: 2;
-						animation: svg-text-stroke 3s;
-					}
-				}
-			}
-
-			#text {
-				animation: svg-text-stroke 3s;
-				stroke-width: 2;
-				--text-color: var(--color--text);
-			}
-		}
+	.circle {
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		background-color: var(--color--card-background); /* Adjust color as needed */
+		position: absolute;
+		top: -3px;
+		left: -3px;
+		z-index: -10;
 	}
 </style>

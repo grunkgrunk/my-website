@@ -15,7 +15,6 @@
 				coverImage="https://placedog.net/500"
 				excerpt="This is a blog post"
 				tags={['Tag 1', 'Tag 2']}
-				readingTime="5 min read"
 			/>
 		</Hst.Variant>
 
@@ -25,7 +24,6 @@
 				title="Blog Post"
 				excerpt="This is a blog post"
 				tags={['Tag 1', 'Tag 2']}
-				readingTime="5 min read"
 			/>
 		</Hst.Variant>
 	</div>

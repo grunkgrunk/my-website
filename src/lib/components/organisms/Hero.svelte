@@ -6,23 +6,10 @@
 </script>
 
 <section id="hero">
-	<h1 class="hello">This is a SvelteKit Static Blog Template!</h1>
+	<h1 class="hello">Hi, I'm Daniel.</h1>
 	<p class="intro">
-		<span class="left">It supports Markdown,</span>
-		<span class="right">and is really fast.</span>
+		I have a masters degree in math and enjoy being creative, making both useful and useless things.
 	</p>
-	<div class="ctas">
-		<Sparkles>
-			<Button href="https://github.com/matfantinel/sveltekit-static-blog-template">
-				<GitHubIcon slot="icon" />
-				Source Code
-			</Button>
-		</Sparkles>
-		<Button color="primary" href="https://histoire-sveltekit-static-blog-template.vercel.app/">
-			<FeaturesIcon slot="icon" />
-			Components
-		</Button>
-	</div>
 </section>
 
 <style lang="scss">
@@ -35,11 +22,9 @@
 		align-items: center;
 		gap: 15px;
 		position: relative;
-		padding: 80px 0;
-
-		@include for-phone-only {
-			padding: 40px 0 50px;
-		}
+		border-color: black;
+		border-radius: 10px;
+		border-width: 10px;
 
 		.hello {
 			text-align: center;
@@ -48,7 +33,7 @@
 		.intro {
 			font-weight: 500;
 			font-size: 1.4rem;
-			width: min(100%, 440px);
+			width: min(100%, 500px);
 			display: flex;
 			flex-direction: column;
 
@@ -57,10 +42,6 @@
 			}
 			.right {
 				text-align: right;
-			}
-
-			@include for-phone-only {
-				display: none;
 			}
 		}
 

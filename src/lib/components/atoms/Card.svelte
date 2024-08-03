@@ -45,7 +45,7 @@
 		background: var(--color--card-background);
 		box-shadow: var(--card-shadow);
 		color: var(--color--text);
-		border-radius: 10px;
+		border-radius: 5px;
 		transition: all 0.4s ease;
 		position: relative;
 		overflow: hidden;

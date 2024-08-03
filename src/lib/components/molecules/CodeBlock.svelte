@@ -1,6 +1,6 @@
 <script lang="ts">
-	export let filename: string;
-	export let lang: string;
+	export let filename: string = '';
+	export let lang: string = '';
 	export let fullBleed: boolean | undefined = undefined;
 </script>
 

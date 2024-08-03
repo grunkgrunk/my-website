@@ -8,7 +8,6 @@
 	export let excerpt: string;
 	export let slug: string;
 	export let tags: string[] | undefined;
-	export let readingTime: string | undefined = undefined;
 
 	export let showImage = true;
 </script>
@@ -27,9 +26,7 @@
 		<p class="title">
 			{title}
 		</p>
-		{#if readingTime}
-			<div class="note">{readingTime}</div>
-		{/if}
+
 		{#if excerpt}
 			<p class="text">
 				{excerpt}
@@ -72,23 +69,20 @@
 		flex-wrap: wrap;
 	}
 
-	.note {
-		font-size: 0.8rem;
-		color: rgba(var(--color--text-rgb), 0.8);
-	}
-
 	.text {
 		margin-top: 5px;
 		font-size: 0.9rem;
-		text-align: justify;
+		hyphens: auto;
 	}
 
 	.footer {
 		margin-top: 20px;
 	}
 
-	:global(.blog-post-card .image img) {
+	:global(.blog-post-card .image img),
+	:global(.blog-post-card .image video) {
 		object-fit: cover;
+		height: 100%;
 	}
 
 	:global(.blog-post-card.no-image > .image) {

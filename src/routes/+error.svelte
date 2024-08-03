@@ -6,18 +6,18 @@
 	import Error from '$lib/icons/error.svelte';
 </script>
 
-<Header showBackground />
+<Header />
 
 <main>
 	<div class="error-page">
 		<div class="container">
-			<h1>Oh no!</h1>
-			<div class="svg-wrapper">
+			<h1>Ooops!</h1>
+			<!-- <div class="svg-wrapper">
 				<Error />
-			</div>
-			<p>It seems like coffee was spilled all over this page, and now it can't be displayed.</p>
+			</div> -->
+			<p>Something went terribly wrong - sorry!</p>
 			<br />
-			<Button href="/">Start over</Button>
+			<Button href="/">Try again</Button>
 		</div>
 	</div>
 </main>

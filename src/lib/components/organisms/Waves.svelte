@@ -1,49 +1,12 @@
-<div class="waves-container">
-	<svg
-		class="waves"
-		xmlns="http://www.w3.org/2000/svg"
-		xmlns:xlink="http://www.w3.org/1999/xlink"
-		viewBox="0 24 150 28"
-		preserveAspectRatio="none"
-		shape-rendering="auto"
-	>
-		<defs>
-			<path
-				id="gentle-wave"
-				d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
-			/>
-		</defs>
-		<g class="parallax">
-			<use
-				xlink:href="#gentle-wave"
-				x="48"
-				y="0"
-				fill="rgba(var(--color--page-background-rgb),0.7)"
-			/>
-			<use
-				xlink:href="#gentle-wave"
-				x="48"
-				y="3"
-				fill="rgba(var(--color--page-background-rgb),0.5)"
-			/>
-			<use
-				xlink:href="#gentle-wave"
-				x="48"
-				y="5"
-				fill="rgba(var(--color--page-background-rgb),0.3)"
-			/>
-			<use xlink:href="#gentle-wave" x="48" y="7" fill="var(--color--page-background)" />
-		</g>
-	</svg>
-</div>
+<div class="waves-container" />
 
 <style lang="scss">
 	@import '$lib/scss/_breakpoints.scss';
 	.waves-container {
-		background: linear-gradient(60deg, var(--color--waves-start) 0%, var(--color--waves-end) 100%);
-		position: absolute;
+		background: linear-gradient(0deg, var(--color--waves-start) 0%, var(--color--waves-end) 100%);
 		width: 100%;
-		height: min(65vh, 500px);
+		height: 100%;
+		z-index: 999;
 
 		@include for-phone-only {
 			height: min(75vh, 400px);

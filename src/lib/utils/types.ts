@@ -14,7 +14,7 @@ export type TagType = {
 }
 
 export type SocialLink = {
-  
+
 }
 
 export type Feature = {
@@ -36,5 +36,6 @@ export type BlogPost = {
   html: string | undefined,
   readingTime: string,
   relatedPosts: BlogPost[],
-  coverImage: string | undefined
+  coverImage: string | undefined,
+  showCoverImage: boolean | undefined
 }
