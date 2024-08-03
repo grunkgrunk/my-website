@@ -2,6 +2,7 @@
 	import Card from '$lib/components/atoms/Card.svelte';
 	import Tag from '$lib/components/atoms/Tag.svelte';
 	import Image from '../atoms/Image.svelte';
+	import { base } from '$app/paths';
 
 	export let title: string;
 	export let coverImage: string | undefined = undefined;
@@ -13,7 +14,7 @@
 </script>
 
 <Card
-	href="/{slug}"
+	href="{base}/{slug}"
 	target="_self"
 	additionalClass="blog-post-card {!showImage || !coverImage ? 'no-image' : ''}"
 >
