@@ -30,7 +30,7 @@
 			text-align: center;
 			font-weight: 500;
 			font-size: 1.4rem;
-			width: min(50%, 500px);
+			width: min(70%, 500px);
 			@include for-phone-only {
 				font-size: 1rem;
 			}
