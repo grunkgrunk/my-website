@@ -12,9 +12,9 @@ const extensions = ['.svelte', '.md'];
 const config = {
 	kit: {
 		adapter: adapter({
-			pages: 'build',
-			assets: 'build',
-			fallback: null
+			//pages: 'build',
+			//assets: 'build',
+			fallback: '404.html'
 		}),
 		paths: {
 			base: process.env.NODE_ENV === 'production' ? '/my-website' : ''
