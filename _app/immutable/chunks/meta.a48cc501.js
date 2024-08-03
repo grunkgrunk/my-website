@@ -1,0 +1,1 @@
+const t="https://sveltekit-static-blog-template.vercel.app/",e=["Svelte","SvelteKit","Blog"],s="A little site where I write about various things.",i="Daniel Grunkin",a=`${t}/images/site-preview.png`;export{s as d,a as i,e as k,t as s,i as t};
