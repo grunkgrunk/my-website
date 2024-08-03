@@ -22,17 +22,16 @@ I thought he was joking. So I went home and made him a little program of procedu
 
 <Image src=/images/posts/sunflowers_0.gif />
 
-Unfortunately not even digital sunflowers could convince him that these flowers are amazing. I quite like them, so now I'm using them as my profile picture on Github. If you want to run this little program you can find it on [BBS](https://www.lexaloffle.com/bbs/?pid=45641). It's written using closures. That is, the ``sunfl`` function returns a function ``f`` which when called has two effects:
+Unfortunately not even digital sunflowers could convince him that these flowers are amazing. I quite like them, so now I'm using them as my profile picture on Github. If you want to run this little program you can find it on [BBS](https://www.lexaloffle.com/bbs/?pid=45641). It's written using closures and you can find the code below. To give a simple overview of what is going on, the ``sunfl`` function returns a function ``f`` which when called has two effects:
 
 - It updates the state within ``f`` (this is what makes the sunflower grow)
 - It renders the sunflower.
 
-It would probably be easier to just use tables instead but I wanted to try out something different. Here is the code.
+It would probably be easier to just use tables instead but I wanted to experiment a bit with closures. Here is the code.
 
 <CodeBlock lang="lua">
 
 ````lua
--- sunflower generator
 function sunfl()
 	-- petal vars
 	local n=0
@@ -67,7 +66,6 @@ function sunfl()
 				r = #root
 			end
 			
-			
 			cy-=growspd
 			cx =cx+(rnd()-0.5)
 			pset(cx,cy,root[r])
@@ -95,13 +93,10 @@ function sunfl()
 		end
 		a=(n*ang)%1
 		r=const*sqrt(n)
-		
 		local x,y=
 		cos(a)*r+cx,
 		sin(a)*r+cy
-		
 		pset(x,y,4)
-		
 		n+=1
 	end
 	
@@ -112,12 +107,10 @@ function sunfl()
 		local x,y=
 		cos(a)*maxrad*osc,
 		sin(a)*maxrad*osc
-		
 		local c = 9
 		if rnd()>0.6 then
 			c=10
 		end
-		
 		pset(x+cx,y+cy,c)
 		a+= 0.01
 	end 
@@ -147,8 +140,6 @@ function reset()
 end
 
 started=false
-
-
 map(0,0,0,0,16,16)
 function _draw()
 	if btn(5) then 
@@ -159,9 +150,7 @@ function _draw()
 		map(0,0,0,0,16,16)
 		fls={}
 	end
-	
 	if(not started)return
-	
 	for f in all(fls) do
 		-- vary the speed of flowers
 		if rnd()>0.2 then
