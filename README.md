@@ -1,23 +1,6 @@
-# SvelteKit Static Blog Template
+# My website
 
-A lightweight and customizable template for blogs and portfolio websites, built with SvelteKit.
-
-<p align="center">
-    <img src="static/images/site-screenshot.png" alt="Screenshot" />
-</p>
-
-It was built with a few goals in mind:
-
-- Responsive design: the website looks and behaves well on screens of all sizes;
-- Fast: it only loads what's needed for it to work;
-- Adaptive: it supports dark mode from most operating systems by default (desktop and mobile);
-- Pretty: have a pleasant design that is both accessible and pleasing to the eye.
-
-I achieved this with the help of SvelteKit. There is almost no JavaScript running, and it actually works with JS disabled! While JS is awesome, it's important to know when it's not needed.
-
-# Demo site
-
-You can see the template live [on the demo site](https://sveltekit-static-blog-template.vercel.app/). Additionally, you can check all components in isolation [on Histoire](https://histoire-sveltekit-static-blog-template.vercel.app/).
+This is the repo for my [website](https://grunkgrunk.github.io/my-website/). It is built using [SvelteKit](https://kit.svelte.dev/) and based on the work of [matfantinel](https://github.com/matfantinel). 
 
 # Building & Running Locally
 
