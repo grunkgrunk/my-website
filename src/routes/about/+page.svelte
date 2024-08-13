@@ -3,10 +3,11 @@
 	import Header from '$lib/components/organisms/Header.svelte';
 	import Footer from '$lib/components/organisms/Footer.svelte';
 
-
 	import Gradient from '$lib/components/organisms/Gradient.svelte';
 	import Socials from '$lib/components/molecules/Socials.svelte';
 	import Image from '$lib/components/atoms/Image.svelte';
+	import Timeline from '$lib/components/organisms/Timeline.svelte';
+	import SeparationLine from '$lib/components/organisms/SeparationLine.svelte';
 </script>
 
 <Gradient />
@@ -21,7 +22,10 @@
 			<Socials />
 		</div>
 	</div>
+	<SeparationLine />
+	<Timeline />
 </div>
+
 <Footer />
 
 <style lang="scss">

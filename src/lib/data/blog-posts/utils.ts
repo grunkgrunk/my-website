@@ -26,7 +26,6 @@ export const importPosts = (render = false) => {
     }
   }
 
-  console.log({ posts });
   return posts;
 }
 

@@ -43,7 +43,7 @@
 </script>
 
 {#if fileExtension === 'mp4'}
-	<video autoplay loop>
+	<video autoplay loop muted>
 		<source src={base + src} type="video/mp4" />
 	</video>
 {:else}

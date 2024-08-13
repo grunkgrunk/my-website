@@ -7,7 +7,6 @@
 	import ContentSection from '$lib/components/organisms/ContentSection.svelte';
 	import Footer from '$lib/components/organisms/Footer.svelte';
 	import Gradient from '$lib/components/organisms/Gradient.svelte';
-
 	import type { Feature, BlogPost } from '$lib/utils/types';
 
 	export let data: {
@@ -21,7 +20,6 @@
 <div class="intro">
 	<Header />
 	<Hero />
-	<div />
 	<div id="projects">
 		<SeparationLine />
 	</div>

@@ -50,6 +50,9 @@
 		position: relative;
 		overflow: hidden;
 		width: 100%;
+		border-width: 1px;
+		border-style: solid;
+		border-color: var(--color--primary-tint);
 
 		display: flex;
 		flex-direction: row;
@@ -63,6 +66,7 @@
 			&:hover {
 				box-shadow: var(--card-shadow-hover);
 				transform: scale(1.01);
+				//border-width: 2px;
 			}
 		}
 	}

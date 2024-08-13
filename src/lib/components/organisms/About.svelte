@@ -4,7 +4,7 @@
 <section id="about">
 	<div class="item">
 		<h2>Education</h2>
-		<p>I hold a master's degree in mathematics from University of Copenhagen.</p>
+		<p>I have a master's degree in mathematics from University of Copenhagen.</p>
 	</div>
 
 	<div class="item">
@@ -16,7 +16,7 @@
 	</div>
 	<div class="item">
 		<h2>Free time</h2>
-		<p>When I'm not at work I enjoy hanging out with friends, playing board games and trombone.</p>
+		<p>I enjoy hanging out with friends, making video games, and playing the trombone.</p>
 	</div>
 </section>
 

@@ -9,12 +9,13 @@
 	export let excerpt: string;
 	export let slug: string;
 	export let tags: string[] | undefined;
+	export let href: string | undefined;
 
 	export let showImage = true;
 </script>
 
 <Card
-	href={base + '/' + slug}
+	href={href ?? (base + '/' + slug)}
 	target="_self"
 	additionalClass="blog-post-card {!showImage || !coverImage ? 'no-image' : ''}"
 >
