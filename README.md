@@ -11,6 +11,6 @@ To run it locally, you simply have to run:
 npm install
 # Then, run it on dev mode
 npm run dev
-```
+``` 
 
 The site should now be available at http://localhost:5173/ on your local machine, and your local machine's IP address on your network—great for testing on mobile OSes.

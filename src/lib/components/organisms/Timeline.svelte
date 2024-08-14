@@ -20,7 +20,7 @@
 					href="https://www.trustpilot.com/"
 					title="Trustpilot"
 					excerpt="
-At Trustpilot, I worked as a full-stack developer, utilizing AWS, Octopus, and Jenkins. I contributed to aligning embedded review widgets with the company's rebranding efforts."
+At Trustpilot, I worked as a full-stack developer, utilizing AWS, Octopus, Docker, and Jenkins. I contributed to aligning embedded review widgets with the company's rebranding efforts."
 				/>
 			</div>
 
