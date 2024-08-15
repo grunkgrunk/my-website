@@ -4,7 +4,7 @@
 <section id="about">
 	<div class="item">
 		<h2>Education</h2>
-		<p>I have a master's degree in mathematics from University of Copenhagen.</p>
+		<p>I hold a Bachelor's degree in Mathematics from the University of Copenhagen and am nearing completion of my Master's in Mathematics.</p>
 	</div>
 
 	<div class="item">
