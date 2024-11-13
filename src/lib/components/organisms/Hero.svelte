@@ -1,7 +1,7 @@
 <section id="hero">
 	<h1 class="hello">Hi, I'm Daniel.</h1>
 	<p class="intro">
-		I'm studying math and enjoy being creative, making both useful and useless things.
+		I have a master's degree in Mathematics and enjoy being creative, making both useful and useless things.
 	</p>
 </section>
 
